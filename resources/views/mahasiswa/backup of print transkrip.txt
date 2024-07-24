@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cetak Transkrip</title>
+
+    <link type="text/css" rel="stylesheet" href="{{ url('resources') }}/assets/css/print.css" />
+    <style>
+
+        body {
+            margin: 15mm 12mm 35mm 12mm;
+        }
+
+        @media print{
+            @page {
+                size: portrait;
+                margin: 15mm 15mm 34mm 12mm;
+            }
+        }
+
+        .border-top {
+            border-top: 1px dotted #999
+        }
+
+        .kontainer {
+            margin-top: 40mm;
+        }
+
+    </style>
+</head>
+<body onload="window.print()">
+
+<div class="kontainer">
+
+    <p>Lampiran Ijazah Nomor Seri : {{ $mhs->seri_ijazah }}</p>
+    <center>
+        <h3><b>TRANSKRIP NILAI</b></h3>
+    </center>
+
+    <br>
+    <table border="0" style="width: 100%;" id="tbl">
+        <tr>
+            <td><b>Nama</b></td>
+            <td>: <b>{{ strtoupper($mhs->nm_mhs) }}</b></td>
+        </tr>
+        <tr>
+            <td width="120">NIM</td>
+            <td>: {{ $mhs->nim }}</td>
+        </tr>
+        <tr>
+            <td width="120">Tempat dan Tgl Lahir</td>
+            <td>: {{ $mhs->tempat_lahir }}, {{ Rmt::tgl_indo($mhs->tgl_lahir) }}</td>
+        </tr>
+        <tr>
+            <td>Program Studi</td>
+            <td>: {{ $mhs->nm_prodi }} ({{ $mhs->jenjang }})</td>
+        </tr>
+        <tr>
+            <td width="100">Konsentrasi</td>
+            <td>: {{ $mhs->nm_konsentrasi }}</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table border="1" width="100%" style="font-size: 11px;border: 2px solid #000">
+        <thead>
+        <tr>
+            <th rowspan="2">NO</th>
+            <th rowspan="2">KODE</th>
+            <th rowspan="2">MATA KULIAH</th>
+            <th colspan="2">NILAI</th>
+            <th rowspan="2">SKS</th>
+            <th rowspan="2">M</th>
+        </tr>
+        <tr>
+            <th>HM</th>
+            <th>AM</th>
+        </tr>
+        </thead>
+        <tbody align="center">
+
+            <?php $total_sks = 0 ?>
+            <?php $total_nilai = 0 ?>
+            <?php $total_bobot = 0 ?>
+
+            <?php $count_krs = count($krs) ?>
+
+            @if ( $count_krs > 0 )
+
+                @foreach( $krs as $r )
+                    <?php $kumulatif = $r->sks_mk * $r->nilai_indeks ?>
+                    <tr>
+                        <td width="10">{{ $loop->iteration }}</td>
+                        <td>{{ $r->kode_mk }}</td>
+                        <td align="left">{{ strtoupper($r->nm_mk) }}</td>
+                        <td>{{ $r->nilai_huruf }}</td>
+                        <td>{{ number_format($r->nilai_indeks,2) }}</td>
+                        <td>{{ $r->sks_mk }}</td>
+                        <td style="text-align: right;padding-right: 5px" width="40">{{ number_format($kumulatif,2) }}</td>
+                    </tr>
+                    <?php
+                        $total_sks += $r->sks_mk;
+                        $total_nilai += $r->nilai_indeks;
+                        $total_bobot += $kumulatif;
+                    ?>
+                @endforeach
+
+                <?php $ipk = number_format($total_bobot / $total_sks, 2); ?>
+                <tr>
+                    <td colspan="3" rowspan="3">
+                        <table border="0" align="left">
+                            <tr>
+                                <td style="padding: 1px">HM</td><td>: Huruf Mutu</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1px">AM</td><td>: Angka Mutu</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1px">SKS</td><td>: Satuan Kredit Semester</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1px">M</td><td>: Mutu</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td colspan="2" style="border: none;text-align: left;padding: 1px" valign="top">Jumlah</td>    
+                    <td style="border: none;padding: 1px" valign="top">{{ $total_sks }}</td> 
+                    <td style="border: none;text-align: right;padding: 1px" valign="top">{{ number_format($total_bobot,2) }}</td>
+                </tr>
+                <tr>
+                    <td style="border: none;text-align: left;padding: 1px">IPK</td>
+                    <td colspan="3" style="border: none;text-align: right;padding: 1px">{{ $ipk }}</td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: left;border-top: none;padding: 1px">Predikat : <br><br>
+                        <b>{{ Sia::predikat($ipk) }}</b>
+                    </td>
+                </tr>
+            @endif
+        </tbody>
+    </table>
+    <br>
+    <table border="0" width="100%">
+        <tr>
+            <td width="60">Skripsi</td>
+            <td style="border: 1px dotted #000">{{ $mhs->judul_skripsi }}</td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    @include('layouts.footer-laporan');
+</div>
+</body>
+</html>

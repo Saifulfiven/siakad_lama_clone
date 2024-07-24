@@ -1,0 +1,69 @@
+Catatan Siakad
+
+- Tambah max_input_vars pada saat hosting
+
+- Modul pindah kelas pada jadwal kuliah
+- Saat naik semester, truncate table krs_tmp 
+
+
+Validasi
+1. Mahasiswa transfer tapi sks nilai_konfersi = 0 (wajib)
+2. Mahasiswa yang berumur < 17 tahun (opsional)
+3. Nilai yang belum terisi (opsional)
+4. Jumlah mahasiswa aktif harus sama dengan jumlah aktivitas mahasiswa pada semester berjalan
+	jml mhs aktif + lulus di periode ini
+
+
+update `dosen_mengajar` set id_dosen='c40e1165-985e-47fb-ba5b-81df8c2fc0ed' where id_dosen='d7034929-7859-40c1-8b7d-cb314746f655'
+
+-- Jadwal
+select * from jadwal_kuliah as jdk
+left join mk_kurikulum as mkur on mkur.id = jdk.id_mkur
+left join matakuliah as mk on mk.id = mkur.id_mk
+where jdk.jenis = 2
+and jdk.id_smt = '20172'
+
+-- Krs
+SELECT jdk.*, mkur.*, mk.*, m1.nim,m2.nm_mhs FROM nilai as n
+left join jadwal_kuliah as jdk on n.id_jdk = jdk.id
+left join mk_kurikulum as mkur on mkur.id = jdk.id_mkur
+left join matakuliah as mk on mk.id = mkur.id_mk
+left join mahasiswa_reg as m1 on m1.id = n.id_mhs_reg
+left join mahasiswa as m2 on m2.id = m1.id_mhs
+where jdk.id_smt = 20181
+
+-- Nilai
+SELECT m1.nim, m2.nm_mhs, mk.kode_mk, mk.nm_mk,
+'' as semester, jdk.kode_kls, n.nilai_huruf, n.nilai_indeks
+from nilai as n
+left join jadwal_kuliah as jdk on n.id_jdk = jdk.id
+left join mk_kurikulum as mkur on mkur.id = jdk.id_mkur
+left join matakuliah as mk on mk.id = mkur.id_mk
+left join mahasiswa_reg as m1 on m1.id = n.id_mhs_reg
+left join mahasiswa as m2 on m2.id = m1.id_mhs
+where jdk.id_smt = 20181
+and jdk.id in ('99699b4e-3879-4e45-bffa-99c30a965a4e','6171fbaa-bf87-482f-a7f8-0300f03d6c78','46cb55c2-e939-4bb4-ad7f-f5563bda3f07')
+
+-- Dosen ajar
+SELECT jdk.*, mk.*, concat("'",d.nidn), d.nm_dosen FROM nilai as n
+left join jadwal_kuliah as jdk on n.id_jdk = jdk.id
+left join mk_kurikulum as mkur on mkur.id = jdk.id_mkur
+left join matakuliah as mk on mk.id = mkur.id_mk
+left join dosen_mengajar as dm on dm.id_jdk = jdk.id
+left JOIN dosen as d on d.id = dm.id_dosen
+where jdk.id_smt = 20181
+and ( d.nidn is NOT null or d.nidn = '' )
+group by n.id_mhs_reg
+
+-- lulus keluar
+select m2.nim from `mahasiswa_reg` as `m2`
+left join `mahasiswa` as `m1` on `m1`.`id` = `m2`.`id_mhs`
+left join `agama` as `a` on `m1`.`id_agama` = `a`.`id_agama`
+left join `prodi` as `p` on `p`.`id_prodi` = `m2`.`id_prodi`
+left join `jenis_keluar` as `jk` on `jk`.`id_jns_keluar` = `m2`.`id_jenis_keluar`
+where `m2`.`id_jenis_keluar` = 1 
+and `m2`.`semester_keluar` in (20171, 20172) 
+and `m2`.`id_prodi` in (61201) 
+and `m2`.`id_jenis_keluar` in (1) 
+and `m2`.`jenis_daftar` in (1) and 
+`m2`.`id_prodi` in (61201)

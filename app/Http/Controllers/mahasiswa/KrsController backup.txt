@@ -1,0 +1,372 @@
+<?php
+
+namespace App\Http\Controllers\mahasiswa;
+
+use Illuminate\Http\Request;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Sia, Rmt, DB, Response,Auth,Session;
+
+class KrsController extends Controller
+{
+    public function index(Request $r)
+    {
+        $mhs = \App\Mahasiswareg::find(Sia::sessionMhs());
+
+        // Jika peserta didik baru 
+        if ( $mhs->jenis_daftar == 1 ) {
+
+            // Matakuliah yang belum diprogramkan pada suatu semester
+            if ( $smt_belum_diprogram = $this->smtBelumDiprogram($mhs) ) {
+                $data['matakuliah'] = $this->getMkReguler($mhs,$smt_belum_diprogram)->get();
+            } else {
+                $data['matakuliah'] = [];
+            }
+
+        } else {
+            // Transfer dll
+            $data['matakuliah'] = $this->matakuliahTransfer($mhs);
+        }
+
+        // Jika semua telah diprogramkan cari mk error yang ada di jadwal
+        $mk_error = $this->mkError($mhs);
+        // Ambil MK Pengganti Jika mk error tidak ada di jadwal berdasarkan kurikulum
+        $data['mk_error'] = $mk_error->union($this->mkPengganti($mhs))->get();
+
+        $data['matakuliah_diambil'] = $this->matakuliahDiambil($mhs);
+
+        // $data['smstr'] = $smstr;
+    	return view('mahasiswa-member.krs.index', $data);
+    }
+
+    private function getMkReguler($mhs, $smstr)
+    {   
+        // Get mk berdasarkan semester dan kurikulum
+        $data = DB::table('jadwal_kuliah as jdk')
+                ->leftJoin('mk_kurikulum as mkur', 'jdk.id_mkur', 'mkur.id')
+                ->leftJoin('kurikulum as k', 'k.id', 'mkur.id_kurikulum')
+                ->leftJoin('matakuliah as mk', 'mk.id', 'mkur.id_mk')
+                ->leftJoin('jam_kuliah as jk', 'jdk.id_jam', 'jk.id')
+                ->select('jdk.id','mk.nm_mk','mk.sks_mk', 'mkur.smt', 'jk.jam_masuk', 'jdk.hari','jdk.kapasitas_kls',
+                    DB::raw('(SELECT COUNT(*) as agr from '.Sia::prefix().'nilai where id_jdk='.Sia::prefix().'jdk.id) as terisi'),
+                    DB::raw('(SELECT COUNT(*) as agr from '.Sia::prefix().'krs_tmp where id_jdk='.Sia::prefix().'jdk.id) as akan_diisi'))
+                ->where('jdk.id_smt', Sia::sessionPeriode())
+                ->where('jdk.id_prodi', $mhs->id_prodi)
+                ->where('mkur.smt', $smstr)
+                ->where('k.id', $mhs->id_kurikulum)
+                ->where('jk.ket', $mhs->jam_kuliah)
+                ->whereNotIn('jdk.id', DB::table('krs_tmp')
+                                        ->where('id_smt', Sia::sessionPeriode())
+                                        ->where('id_mhs_reg', $mhs->id)
+                                        ->pluck('id_jdk'))
+                ->orderBy('mkur.smt')
+                ->orderBy('mk.kode_mk');
+
+        // $data = DB::select("
+
+        //     SELECT id_mk, nm_mk, sks_mk, smt
+        //     FROM (
+        //         SELECT id_mk, kode_mk, nm_mk, sks_mk, smt, kapasitas_kls, (terisi + akan_diisi ) as terisi
+        //         from (
+        //             SELECT mk.id as id_mk, mk.kode_mk,mk.nm_mk, mk.sks_mk,mkur.smt,jdk.kapasitas_kls,
+        //                 (select count(*) as agr from ".Sia::prefix()."nilai where id_jdk = 'jdk.id') as terisi,
+        //                 (select count(*) as agr2 from ".Sia::prefix()."krs_tmp where id_jdk = 'jdk.id') as akan_diisi
+        //                 from ".Sia::prefix()."jadwal_kuliah as jdk
+        //                 left join ".Sia::prefix()."mk_kurikulum as mkur on jdk.id_mkur = mkur.id
+        //                 left join ".Sia::prefix()."kurikulum as k on k.id = mkur.id_kurikulum
+        //                 left join ".Sia::prefix()."matakuliah as mk on mk.id = mkur.id_mk
+        //                 where jdk.id_smt = '".Sia::sessionPeriode()."'
+        //                 and jdk.id_prodi = '$mhs->id_prodi'
+        //                 and mkur.smt = '$smstr'
+        //                 and k.id = '$mhs->id_kurikulum'
+        //                 and jdk.id not in (
+        //                     select id_jdk from ".Sia::prefix()."krs_tmp
+        //                         where id_smt='".Sia::sessionPeriode()."'
+        //                         and id_mhs_reg='$mhs->id'
+        //                     )
+        //         ) as res
+        //     ) as res2 where terisi < kapasitas_kls
+        //     group by id_mk
+        //     order by smt asc
+        // ");
+        return $data;
+    }
+
+    private function mkError($mhs)
+    {
+        $data = DB::table('nilai as n')
+                ->leftJoin('jadwal_kuliah as jdk', 'n.id_jdk', 'jdk.id')
+                ->leftJoin('mk_kurikulum as mkur', 'mkur.id', 'jdk.id_mkur')
+                ->leftJoin('kurikulum as k', 'k.id', 'mkur.id_kurikulum')
+                ->leftJoin('matakuliah as mk', 'mk.id', 'mkur.id_mk')
+                ->leftJoin('jam_kuliah as jk', 'jdk.id_jam', 'jk.id')
+                ->select('jdk.id','mk.nm_mk','mk.sks_mk', 'mkur.smt', 'jk.jam_masuk', 'jdk.hari','jdk.kapasitas_kls',
+                    DB::raw('(SELECT COUNT(*) as agr from '.Sia::prefix().'nilai where id_jdk='.Sia::prefix().'jdk.id) as terisi'),
+                    DB::raw('(SELECT COUNT(*) as agr from '.Sia::prefix().'krs_tmp where id_jdk='.Sia::prefix().'jdk.id) as akan_diisi'))
+                ->where('n.id_mhs_reg', $mhs->id)
+                ->where('n.nilai_indeks', 0)
+                ->where('mkur.periode', Sia::sessionPeriode('smt'))
+                ->where('jdk.id_smt', Sia::sessionPeriode())
+                ->orderBy('mkur.smt');
+
+        return $data;
+    }
+
+    private function mkPengganti($mhs)
+    {
+        // Mengambil mk error yang ada pada kurikulum lain
+        $data = DB::table('nilai as n')
+                ->leftJoin('jadwal_kuliah as jdk', 'n.id_jdk', 'jdk.id')
+                ->leftJoin('mk_kurikulum as mkur', 'mkur.id', 'jdk.id_mkur')
+                ->leftJoin('kurikulum as k', 'k.id', 'mkur.id_kurikulum')
+                ->leftJoin('jam_kuliah as jk', 'jdk.id_jam', 'jk.id')
+                ->leftJoin('matakuliah as mp', 'mp.mk_terganti', 'mkur.id_mk')
+                ->leftJoin('matakuliah as mk', 'mk.id', 'mp.mk_terganti')
+                ->select('jdk.id','mk.nm_mk','mk.sks_mk', 'mkur.smt', 'jk.jam_masuk', 'jdk.hari','jdk.kapasitas_kls',
+                    DB::raw('(SELECT COUNT(*) as agr from '.Sia::prefix().'nilai where id_jdk='.Sia::prefix().'jdk.id) as terisi'),
+                    DB::raw('(SELECT COUNT(*) as agr from '.Sia::prefix().'krs_tmp where id_jdk='.Sia::prefix().'jdk.id) as akan_diisi'))
+                ->where('n.id_mhs_reg', $mhs->id)
+                ->where('n.nilai_indeks', 0)
+                ->where('mkur.periode', Sia::sessionPeriode('smt'))
+                ->where('jdk.id_smt', Sia::sessionPeriode())
+                ->orderBy('mkur.smt');
+
+        return $data;
+    }
+
+    // private function getSmtMhs($mhs)
+    // {
+    //     $smt_mulai = Sia::sessionMhs('smt_mulai');
+    //     $smstr = Sia::posisiSemesterMhs($smt_mulai, Sia::sessionPeriode());
+    //     if ( substr($smt_mulai,4) == 2 ) {
+    //         $smstr += 1; 
+    //     }
+
+    //     return $this->tinjauAkm($mhs,$smstr);
+    // }
+
+    // private function tinjauAkm($mhs,$smstr_now)
+    // {
+    //     // Get AKM mhs selain yang aktif yang berada pada semester terkecil
+    //     $sql_na = DB::select("
+    //         SELECT min(id_smt) as id_smt, status_mhs from (
+    //             SELECT id_smt,status_mhs from aktivitas_kuliah where id_mhs_reg='$mhs->id'
+    //             order by id_smt asc limit 7
+    //         ) as res where status_mhs <> 'A' limit 1"
+    //     );
+
+
+    //     if ( count($sql_na) > 0 ) {
+    //         $non_aktif = $sql_na[0]->id_smt;
+
+    //         $smstr_non_aktif = Sia::posisiSemesterMhs($mhs->semester_mulai, $non_aktif);
+    //         $jns_smt_non_aktif = substr($non_aktif,4,1);
+
+    //         // Jika Non aktif / cuti di ganjil
+    //         if ( $jns_smt_non_aktif == 1 ) {
+
+    //             $smt_mk = $smstr_now - $smstr_non_aktif + 1;
+    //             if ( $smt_mk < $smstr_non_aktif ) {
+    //                 $smt_mk = $smstr_now;
+    //             }
+
+    //         } else {
+    //             // Jika non aktif / cuti di genap;
+    //             $smt_mk = $smstr_now - $smstr_non_aktif;
+    //             if ( $smt_mk < $smstr_non_aktif ) {
+    //                 $smt_mk = $smstr_now;
+    //             }
+    //         }
+
+    //         return $smt_mk;
+
+    //     } else {
+
+    //         return $smstr_now;
+    //     }
+    // }
+
+    private function smtBelumDiprogram($mhs)
+    {
+
+        $data = DB::table('mk_kurikulum as mkur')
+                ->leftJoin('matakuliah as mk', 'mkur.id_mk', 'mk.id')
+                ->whereNotIn('mkur.id_mk', 
+                    DB::table('nilai as n')
+                    ->leftJoin('jadwal_kuliah as jdk', 'n.id_jdk', 'jdk.id')
+                    ->leftJoin('mk_kurikulum as mkur2', 'jdk.id_mkur', 'mkur2.id')
+                    ->where('n.id_mhs_reg', $mhs->id)
+                    ->whereIn('mkur2.smt', Sia::listJenisSmt(Sia::sessionPeriode('smt')))
+                    ->pluck('mkur2.id_mk'))
+                ->where('mkur.id_kurikulum', $mhs->id_kurikulum)
+                ->whereIn('mkur.smt', Sia::listJenisSmt(Sia::sessionPeriode('smt')))
+                ->where('mk.jenis_mk', 'A')
+                ->whereNull('mk.id_konsentrasi')
+                ->min('mkur.smt');
+
+        return $data;
+                // print_r($data);
+                // exit;
+    }
+
+
+    private function matakuliahDiambil($mhs)
+    {
+        $data = DB::table('krs_status as krs')
+                ->leftJoin('jadwal_kuliah as jdk', 'krs.id_jdk', 'jdk.id')
+                ->leftJoin('mk_kurikulum as mkur', 'jdk.id_mkur', 'mkur.id')
+                ->leftJoin('kurikulum as k', 'k.id', 'mkur.id_kurikulum')
+                ->leftJoin('matakuliah as mk', 'mk.id', 'mkur.id_mk')
+                ->leftJoin('jam_kuliah as jk', 'jdk.id_jam', 'jk.id')
+                ->select('jdk.id','mk.nm_mk','mk.sks_mk', 'mkur.smt', 'jk.jam_masuk', 'jdk.hari')
+                ->where('krs.id_smt', Sia::sessionPeriode())
+                ->where('krs.id_mhs_reg', $mhs->id)
+                ->orderBy('mkur.smt')
+                ->orderBy('mk.kode_mk');
+    }
+
+    private function matakuliahTransfer($mhs)
+    {
+        $data = DB::table('jadwal_kuliah as jdk')
+                ->leftJoin('mk_kurikulum as mkur', 'jdk.id_mkur', 'mkur.id')
+                ->leftJoin('kurikulum as k', 'k.id', 'mkur.id_kurikulum')
+                ->leftJoin('matakuliah as mk', 'mk.id', 'mkur.id_mk')
+                ->leftJoin('jam_kuliah as jk', 'jdk.id_jam', 'jk.id')
+                ->select('jdk.id','mk.nm_mk','mk.sks_mk', 'mkur.smt', 'jk.jam_masuk', 'jdk.hari','jdk.kapasitas_kls',
+                    DB::raw('(SELECT COUNT(*) as agr from '.Sia::prefix().'nilai where id_jdk='.Sia::prefix().'jdk.id) as terisi'),
+                    DB::raw('(SELECT COUNT(*) as agr from '.Sia::prefix().'krs_tmp where id_jdk='.Sia::prefix().'jdk.id) as akan_diisi'))
+                ->where('jdk.id_smt', Sia::sessionPeriode())
+                ->where('jdk.id_prodi', $mhs->id_prodi)
+                ->where('mkur.periode', Sia::sessionPeriode('smt'))
+                ->where('k.id', $mhs->id_kurikulum)
+                ->whereNotIn('jdk.id', DB::table('krs_tmp')
+                                        ->where('id_smt', Sia::sessionPeriode())
+                                        ->where('id_mhs_reg', $mhs->id)
+                                        ->pluck('id_jdk'))
+                ->orderBy('mkur.smt')
+                ->orderBy('mk.kode_mk');
+    }
+    // private function cuti($id_mhs_reg)
+    // {
+    //     $cuti = DB::table('aktivitas_kuliah')
+    //             ->select('id_smt', DB::raw('right(id_smt,1) as jns_smt'))
+    //             ->where('id_mhs_reg', $id_mhs_reg)
+    //             ->orderBy('id_smt')->first();
+    //     if ( !empty($cuti) ) {
+    //         return $cuti;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+
+    public function storeTmp(Request $r)
+	{
+		$this->validate($r, [
+			'id_prodi' => 'required|unique:prodi',
+			'nm_prodi' => 'required',
+			'jenjang' => 'required',
+			'gelar' => 'required',
+			'kode_nim' => 'required',
+			'sk_akreditasi' => 'required',
+		]);
+
+		try {
+			DB::transaction(function() use($r){
+
+				$data = new Prodi;
+				$data->id_fakultas = $r->id_fakultas;
+				$data->id_prodi = $r->id_prodi;
+				$data->nm_prodi = $r->nm_prodi;
+				$data->jenjang = $r->jenjang;
+				$data->gelar = $r->gelar;
+				$data->kode_nim = $r->kode_nim;
+				$data->sk_akreditasi = $r->sk_akreditasi;
+				$data->save();
+
+			});
+		} catch(\Exception $e) {
+			return Response::json(['error' => 1, 'msg' => $e->getMessage()],200);
+		}
+
+		Rmt::success('Berhasil menyimpan data');
+		$response = ['error' => 0, 'msg' => 'sukses'];
+		return Response::json($response,200);
+	}
+
+	public function store(Request $r)
+	{
+		$prodi = Prodi::where('id_prodi', $id)->first(); ?>
+
+        <form action="<?= route('m_prodi_update') ?>" id="form-prodi" method="post">
+            <?= csrf_field() ?>
+            <input type="hidden" name="id" value="<?= $id ?>">
+
+            <div class="table-responsive">
+                <table border="0" class="table table-hover table-form">
+                    <tr class="pindahan">
+                        <td>Kode Prodi <span>*</span></td>
+                        <td>
+                            <input type="text" name="id_prodi" disabled="" value="<?= $prodi->id_prodi ?>" class="form-control mw-1">
+                        </td>
+                    </tr>
+                    <tr class="pindahan">
+                        <td>Nama Prodi <span>*</span></td>
+                        <td>
+                            <input type="text" name="nm_prodi" value="<?= $prodi->nm_prodi ?>" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Jenjang <span>*</span></td>
+                        <td>
+                            <select class="form-control select-jenis-daftar mw-1" name="jenjang">
+                                <?php foreach( Sia::jenjang() as $jp ) { ?>
+                                    <option value="<?= $jp ?>" <?= $jp == $prodi->jenjang ? 'selected':'' ?>><?= $jp ?></option>
+                                <?php } ?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gelar Akademik <span>*</span></td>
+                        <td>
+                            <input type="text" name="gelar" value="<?= $prodi->gelar ?>" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Kode NIM <span>*</span>
+                        <p style="font-size: 15px">xxxx<span style="color:red;font-size: 15px"> 21 </span>xxxx</p>
+                        </td>
+                        <td>
+                            <input type="text" name="kode_nim" value="<?= $prodi->kode_nim ?>" class="form-control mw-1">
+                        </td>
+                    </tr>
+                    <tr>
+                    <td>No. SK Akreditasi <span>*</span></td>
+                    <td>
+                        <input type="text" name="sk_akreditasi" value="<?= $prodi->sk_akreditasi ?>" class="form-control">
+                    </td>
+                </tr>
+                </table>
+            </div>
+            <hr>
+            <button type="submit" id="btn-submit" class="pull-right btn btn-primary btn-sm"><i class="fa fa-floppy-o"></i> SIMPAN</button>&nbsp; &nbsp; &nbsp;
+        </form>
+        <?php
+	}
+
+    public function deleteTmp($id)
+    {
+    	$rule = DB::table('mahasiswa_reg')->where('id_prodi',$id)->count();
+    	$rule2 = DB::table('jadwal_kuliah')->where('id_prodi',$id)->count();
+    	$rule3 = DB::table('matakuliah')->where('id_prodi',$id)->count();
+    	$rule4 = DB::table('kurikulum')->where('id_prodi',$id)->count();
+
+    	if ( $rule + $rule2 + $rule3 + $rule4 > 0 ) {
+    		Rmt::error('Gagal menghapus, prodi sedang terpakai pada modul lain');
+    		return redirect()->back();
+    	}
+
+    	Prodi::where('id_prodi',$id)->delete();
+    	Rmt::success('Berhasil menghapus data');
+    	return redirect()->back();
+    }
+}

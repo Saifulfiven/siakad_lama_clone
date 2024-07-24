@@ -1,0 +1,1658 @@
+[
+  {
+    "KURIKULUM": 2011,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2011,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2011,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 2,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2011,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2011,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2013,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2013,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2013,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2013,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2013,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2013,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2013,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2013,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 2,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 2,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2014,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2016,
+    "JENJANG": "Strata 2",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 2,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 2,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2018,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2019,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2019,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2019,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2019,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2019,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2019,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2019,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2019,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 2,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 2,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2020,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2021,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 85,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2021,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 75,
+    "BATAS ATAS": 84.99
+  },
+  {
+    "KURIKULUM": 2021,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 2,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 65,
+    "BATAS ATAS": 74.99
+  },
+  {
+    "KURIKULUM": 2021,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 55,
+    "BATAS ATAS": 64.99
+  },
+  {
+    "KURIKULUM": 2021,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54.99
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 85,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 80,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 75,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 70,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 65,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 60,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 55,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 85,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 80,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 75,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 70,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 65,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 60,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 55,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 85,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 80,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 75,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 70,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 65,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 60,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 55,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Sistem dan Teknologi Informasi",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Manajemen",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Akuntansi",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 85,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 80,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 75,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 70,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 65,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 60,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 55,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Keuangan Publik",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Keuangan Publik",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Keuangan Publik",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Keuangan Publik",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Keuangan Publik",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Keuangan Publik",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Keuangan Publik",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Keuangan Publik",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen dan Kewirausahaan",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 84.01,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen dan Kewirausahaan",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 79.01,
+    "BATAS ATAS": 84
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen dan Kewirausahaan",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 74.01,
+    "BATAS ATAS": 79
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen dan Kewirausahaan",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 69.01,
+    "BATAS ATAS": 74
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen dan Kewirausahaan",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 64.01,
+    "BATAS ATAS": 69
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen dan Kewirausahaan",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 59.01,
+    "BATAS ATAS": 64
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen dan Kewirausahaan",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 54.01,
+    "BATAS ATAS": 59
+  },
+  {
+    "KURIKULUM": 2022,
+    "JENJANG": "Strata 2",
+    "UNIT": "Magister Manajemen dan Kewirausahaan",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 85,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 80,
+    "BATAS ATAS": 84.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 75,
+    "BATAS ATAS": 79.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 70,
+    "BATAS ATAS": 74.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 65,
+    "BATAS ATAS": 69.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 60,
+    "BATAS ATAS": 64.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 55,
+    "BATAS ATAS": 59.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Industri",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 85,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 80,
+    "BATAS ATAS": 84.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 75,
+    "BATAS ATAS": 79.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 70,
+    "BATAS ATAS": 74.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 65,
+    "BATAS ATAS": 69.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 60,
+    "BATAS ATAS": 64.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 55,
+    "BATAS ATAS": 59.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknik Pertambangan",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 85,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 80,
+    "BATAS ATAS": 84.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 75,
+    "BATAS ATAS": 79.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 70,
+    "BATAS ATAS": 74.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 65,
+    "BATAS ATAS": 69.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 60,
+    "BATAS ATAS": 64.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 55,
+    "BATAS ATAS": 59.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Teknologi Hasil Perikanan",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 4,
+    "NILAI HURUF": "A",
+    "BATAS BAWAH": 85,
+    "BATAS ATAS": 100
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 3.75,
+    "NILAI HURUF": "A-",
+    "BATAS BAWAH": 80,
+    "BATAS ATAS": 84.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 3.5,
+    "NILAI HURUF": "B+",
+    "BATAS BAWAH": 75,
+    "BATAS ATAS": 79.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 3,
+    "NILAI HURUF": "B",
+    "BATAS BAWAH": 70,
+    "BATAS ATAS": 74.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 2.75,
+    "NILAI HURUF": "B-",
+    "BATAS BAWAH": 65,
+    "BATAS ATAS": 69.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 2.5,
+    "NILAI HURUF": "C",
+    "BATAS BAWAH": 60,
+    "BATAS ATAS": 64.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 1,
+    "NILAI HURUF": "D",
+    "BATAS BAWAH": 55,
+    "BATAS ATAS": 59.99
+  },
+  {
+    "KURIKULUM": 2023,
+    "JENJANG": "Strata 1",
+    "UNIT": "Pendidikan Teknologi Informasi",
+    "NILAI ANGKA": 0,
+    "NILAI HURUF": "E",
+    "BATAS BAWAH": 0,
+    "BATAS ATAS": 54.99
+  }
+]

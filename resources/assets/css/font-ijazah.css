@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Batang";
+    src: url("https://db.onlinewebfonts.com/t/3d1b893686cc335f18f3ef9dd56380b4.eot"); /* IE9*/
+    src: url("https://db.onlinewebfonts.com/t/3d1b893686cc335f18f3ef9dd56380b4.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://db.onlinewebfonts.com/t/3d1b893686cc335f18f3ef9dd56380b4.woff2") format("woff2"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/3d1b893686cc335f18f3ef9dd56380b4.woff") format("woff"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/3d1b893686cc335f18f3ef9dd56380b4.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("https://db.onlinewebfonts.com/t/3d1b893686cc335f18f3ef9dd56380b4.svg#Batang") format("svg"); /* iOS 4.1- */
+}
+
+@font-face {font-family: "ITC Eras";
+    src: url("https://db.onlinewebfonts.com/t/457055c70a9c98aa64002f05d6652edc.eot"); /* IE9*/
+    src: url("https://db.onlinewebfonts.com/t/457055c70a9c98aa64002f05d6652edc.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("https://db.onlinewebfonts.com/t/457055c70a9c98aa64002f05d6652edc.woff2") format("woff2"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/457055c70a9c98aa64002f05d6652edc.woff") format("woff"), /* chrome firefox */
+    url("https://db.onlinewebfonts.com/t/457055c70a9c98aa64002f05d6652edc.ttf") format("truetype"), /* chrome firefox opera Safari, Android, iOS 4.2+*/
+    url("https://db.onlinewebfonts.com/t/457055c70a9c98aa64002f05d6652edc.svg#ITC Eras") format("svg"); /* iOS 4.1- */
+}

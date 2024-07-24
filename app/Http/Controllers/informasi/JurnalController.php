@@ -1,0 +1,84 @@
+<?php
+
+namespace App\Http\Controllers\informasi;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Session, DB, Rmt;
+use App\InformasiModels\Jurnal;
+
+class JurnalController extends Controller
+{
+    private $f = 'informasi.jurnal.';
+    private $prefix;
+    
+    public function __construct()
+    {
+        $this->prefix = env('DB_TABLE_PREFIX');
+    }
+
+    public function index(Request $r)
+    {
+
+        $data['jurnal'] = Jurnal::orderBy('judul','asc')->paginate(20);
+
+        return view($this->f."index", $data);
+    }
+
+    public function create()
+    {
+        return view($this->f."create");
+    }
+
+    public function store(Request $r)
+    {
+        $this->validate($r, [
+                'judul' => 'required|max:255',
+                'url' => 'required|max:255',
+            ]);
+
+        $data = new Jurnal;
+        $data->judul    = $r->judul;
+        $data->url      = $r->url;
+        $data->save();
+
+        Rmt::Success('Berhasil menyimpan data');
+        return redirect(route('jurnal'));
+    }
+
+    public function edit($id)
+    {
+        $data['jurnal'] = Jurnal::find($id);
+
+        return view($this->f.'edit', $data);
+    }
+
+    public function update(Request $r)
+    {
+        $this->validate($r, [
+                'judul' => 'required|max:255',
+                'url' => 'required|max:255',
+            ]);
+
+        $data = Jurnal::find($r->id);
+        $data->judul    = $r->judul;
+        $data->url      = $r->url;
+        $data->save();
+
+        Rmt::Success('Berhasil menyimpan data');
+        return redirect(route('jurnal'));
+    }
+
+    public function delete($id)
+    {
+        $val = explode(",", $id);
+
+        foreach ($val as $v) {
+            Jurnal::where('id', $v)->delete();
+        }
+
+        Rmt::Success('Berhasil menghapus data');
+        return redirect()->back();
+    }
+
+}

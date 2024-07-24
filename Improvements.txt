@@ -1,0 +1,7 @@
+1. Nilai tidak tampil jika kartu ujian UAS belum keluar
+2. Sistem penilaian s2 juga termasuk (UTS => NIL UTS + NILA UAS /2)
+3. Menu kartu ujian & jadwal ujian disatukah
+4. Akun untuk akses pengumuman untuk semu karyawan
+5. Jurusan: Dapat mengubah komentar mahasiswa pada kuesioner
+6. Komentar hanya dapat dilihat setelah jurusan menyetujui
+7. Dosen bisa melihat hasil kuesioner

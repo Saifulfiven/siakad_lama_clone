@@ -1,0 +1,1 @@
+<img src="{{ url('resources') }}/assets/img/kop-pasca.png" width="100%">

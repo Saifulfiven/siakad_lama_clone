@@ -1,0 +1,47 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Force ssl
+    RewriteCond %{HTTPS} !=on [NC]
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+    
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect ke siakad.nobel.ac.id
+    RewriteCond %{HTTP_HOST} ^siakad.stienobel-indonesia.ac.id [NC]
+    RewriteRule ^ http://siakad2.nobel.ac.id [L,R=301,NE]
+
+    Options All -Indexes
+
+</IfModule>
+
+<ifmodule mod_headers.c="">
+   SetEnvIf Origin "^(.*\.domain\.com)$" ORIGIN_SUB_DOMAIN=$1
+   Header set Access-Control-Allow-Origin "%{ORIGIN_SUB_DOMAIN}e" env=ORIGIN_SUB_DOMAIN
+   Header set Access-Control-Allow-Methods: "*"
+   Header set Access-Control-Allow-Headers: "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+</ifmodule>
+
+<Files .env>
+order allow,deny
+Deny from all
+</Files>
+<Files env.txt>
+order allow,deny
+Deny from all
+</Files>

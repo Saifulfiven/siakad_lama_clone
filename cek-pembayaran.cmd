@@ -1,0 +1,1 @@
+C:\xampp\php\php.exe C:\xampp\htdocs\Dropbox\siakad\cek-pembayaran.php

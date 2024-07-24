@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cetak KHS</title>
+
+    <link type="text/css" rel="stylesheet" href="{{ url('resources') }}/assets/css/print.css" />
+    <style>
+        body {
+            margin: 20mm 20mm 20mm 20mm;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .border-top {
+            border-top: 1px dotted #999
+        }
+
+        /* .kontainer {
+   margin-top: {{ Sia::option('margin_kertas_kop') }}mm;
+  } */
+
+        table {
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body onload="window.print()">
+
+    <div class="kontainer">
+
+        {{-- {{ dd($mhs->jenjang) }} --}}
+        @if ($mhs->jenjang != 'S2')
+            <img src="{{ url('resources') }}/assets/img/new-kop.png" width="100%">
+        @endif
+
+        <center style="margin-top: 75px;">
+            <h3><b>{{ Session::get('jeniskrs_in_nilai') == 2 ? 'NILAI SEMESTER PENDEK TA. ' . Sia::sessionPeriode('nama') : 'KARTU HASIL STUDI (KHS)' }}</b>
+            </h3>
+        </center>
+
+        <br>
+        <table border="0" style="width: 100%" id="tbl">
+            <tr>
+                <td width="120">NIM</td>
+                <td>: {{ $mhs->nim }}</td>
+                <td>Jenis Kelamin</td>
+                <td>: {{ Sia::nmJenisKelamin($mhs->jenkel) }}</td>
+            </tr>
+            <tr>
+                <td>Nama Mahasiswa</td>
+                <td>: {{ $mhs->nm_mhs }}</td>
+                <td>Semester</td>
+                <td>: {{ Sia::posisiSemesterMhs($mhs->semester_mulai, Session::get('smt_in_nilai')) }}</td>
+            </tr>
+            <tr>
+                <td>Program Studi</td>
+                <td>: {{ $mhs->jenjang }} {{ $mhs->nm_prodi }}</td>
+                <td width="100">Konsentrasi</td>
+                <td>: {{ $mhs->nm_konsentrasi }}</td>
+            </tr>
+        </table>
+
+        <br>
+
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th rowspan="2">No.</th>
+                    <th rowspan="2">Kode MK</th>
+                    <th rowspan="2">Nama MK</th>
+                    <th rowspan="2">SKS</th>
+                    <th colspan="2">Nilai</th>
+                    <th rowspan="2">Bobot</th>
+                </tr>
+                <tr>
+                    <th>Huruf</th>
+                    <th>Indeks</th>
+                </tr>
+            </thead>
+            <tbody align="center">
+
+                <?php $total_sks = 0; ?>
+                <?php $total_nilai = 0; ?>
+                <?php $total_bobot = 0; ?>
+                @php
+                    $index= 0;
+                @endphp
+                @foreach ($krs as $r)
+                    @php $index++ @endphp
+                    <?php $kumulatif = $r->sks_mk * $r->nilai_indeks; ?>
+                    <tr>
+                        <td>{{ $index }}</td>
+                        <td>{{ $r->kode_mk }}</td>
+                        <td align="left">{{ $r->nm_mk }}</td>
+                        <td>{{ $r->sks_mk }}</td>
+                        <td>{{ $r->nilai_huruf }}</td>
+                        <td>{{ number_format($r->nilai_indeks, 2) }}</td>
+                        <td>{{ number_format($kumulatif, 2) }}</td>
+                    </tr>
+                    <?php
+                    $total_sks += $r->sks_mk;
+                    $total_nilai += $r->nilai_indeks;
+                    $total_bobot += $kumulatif;
+                    ?>
+                @endforeach
+
+                @foreach( $mbkm as $m )
+                    @php $index++ @endphp
+                        <?php $kumulatif = $m->sks_mk * $m->nil_indeks ?>
+                    <tr>
+                        <td>{{ $index }}</td>
+                        <td>{{ $m->kode_mk }}</td>
+                        <td align="left">{{ $m->nm_mk }}</td>
+                        <td>{{ $m->sks_mk }}</td>
+                        <td>{{ $m->nil_huruf }}</td>
+                        <td>{{ number_format($m->nil_indeks,2) }}</td>
+                        <td>{{ number_format($kumulatif,2) }}</td>
+                    </tr>
+                        <?php
+                        $total_sks += $m->sks_mk;
+                        $total_nilai += $m->nil_indeks;
+                        $total_bobot += $kumulatif;
+                        ?>
+                @endforeach
+                <tr>
+                    <th colspan="3">Total</th>
+                    <th>{{ $total_sks }}</th>
+                    <th></th>
+                    <th>{{ number_format($total_nilai, 2) }}</th>
+                    <th>{{ number_format($total_bobot, 2) }}</th>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table style="width:100%" border="0">
+            <tr>
+                <td width="250">{{ Session::get('jeniskrs_in_nilai') == 1 ? 'SKS Semester Ini' : '' }}</td>
+                <td width="60">{{ Session::get('jeniskrs_in_nilai') == 1 ? ': &nbsp;' . $total_sks : '' }}</td>
+                <td rowspan="5" valign="top" width="350">
+                    <div style="padding-left: 50px">
+                        Makassar, {{ Rmt::tgl_indo(Carbon::today()) }} <br>
+                        {{ Config::get('app.pt') }}<br>
+                        @if($mhs->jenjang == 'S2')
+                          Fakultas Pascasarjana <br>
+                        @endif
+                        Kabag. Adm. Akademik
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        @if (in_array(61101, Sia::getProdiUser()))
+                            {{ Sia::option('kabag_akademik_s2') }}
+                        @else
+                            {{ Sia::option('kabag_akademik') }}
+                        @endif
+                    </div>
+                </td>
+            </tr>
+
+            @if (Session::get('jeniskrs_in_nilai') == 1)
+                <tr class="border-top">
+                    <td>SKS yang Telah Dilulusi</td>
+                    <td>: &nbsp; {{ $ipk->tot_sks }}</td>
+                </tr>
+                <tr class="border-top">
+                    <td>Indeks Prestasi Semester (IPS)</td>
+                    <td>: &nbsp; {{ Sia::ipk($total_bobot, $total_sks) }}</td>
+                </tr>
+                <tr class="border-top">
+                    <td>Indeks Prestasi Kumulatif (IPK)</td>
+                    <td>: &nbsp; {{ Sia::ipk($ipk->tot_nilai, $ipk->tot_sks) }}</td>
+                </tr>
+                <tr class="border-top">
+                    <td>Max. Beban SKS Semester Depan</td>
+                    <td>: &nbsp; {{ $total_sks }}</td>
+                </tr>
+            @endif
+        </table>
+
+    </div>
+
+</body>
+
+</html>

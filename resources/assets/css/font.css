@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'KoHo-Medium';
+    src:url('fonts/koho/KoHo-Medium.ttf.woff') format('woff'),
+        url('fonts/koho/KoHo-Medium.ttf.svg#KoHo-Medium') format('svg'),
+        url('fonts/koho/KoHo-Medium.ttf.eot'),
+        url('fonts/koho/KoHo-Medium.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}

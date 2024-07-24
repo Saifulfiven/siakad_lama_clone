@@ -1,0 +1,12 @@
+{
+    "name": "vendor/latihan",
+    "authors": [
+        {
+            "name": "Abd Rahmat Ika",
+            "email": "abd.rahmat.ika@gmail.com"
+        }
+    ],
+    "require": {
+    	"google/apiclient": "^2.0"
+    }
+}

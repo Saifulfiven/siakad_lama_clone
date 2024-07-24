@@ -1,0 +1,14 @@
+2f0811d3-dbb1-4fa0-9f78-1ffa5619b8
+
+select * from sia_nilai as nil
+left join sia_jadwal_kuliah as jdk on nil.id_jdk=jdk.id
+where jdk.id_smt BETWEEN '20152' and '20161'
+and nil.id_mhs_reg='2f0811d3-dbb1-4fa0-9f78-1ffa5619b8'
+
+
+select * from nilai as n
+left join mahasiswa_reg as m on n.id_mhs_reg = m.id
+left join jadwal_kuliah as jdk on jdk.id = n.id_jdk
+where jdk.jenis = 2
+and m.nim in (
+)
