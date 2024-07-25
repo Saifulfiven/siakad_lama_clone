@@ -9,7 +9,7 @@
     <div class="col-md-12">
       <section class="panel" style="padding-bottom: 50px">
         <header class="panel-heading" style="border: none !important">
-          Kehadiran Mahasiswa
+          Kehadiran Mahasiswa ipul
           <a href="#" onclick="goBack()" style="margin: 3px 3px" class="btn btn-success btn-xs pull-right"><i class="fa fa-list"></i> KEMBALI</a>
         </header>
           

@@ -100,7 +100,7 @@ return [
     */
 
     //'url' => env('APP_URL', 'http://siakad2.nobel.ac.id'),
-    'url' => env('APP_URL', 'http://localhost/siakud2'),
+    'url' => env('APP_URL', 'https://testingsiakad.nobel.ac.id/'),
 
     /*
     |--------------------------------------------------------------------------

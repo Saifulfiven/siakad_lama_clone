@@ -24,7 +24,7 @@
 
     # Redirect ke siakad.nobel.ac.id
     RewriteCond %{HTTP_HOST} ^siakad.stienobel-indonesia.ac.id [NC]
-    RewriteRule ^ http://siakad2.nobel.ac.id [L,R=301,NE]
+    RewriteRule ^ http://testingsiakad.nobel.ac.id [L,R=301,NE]
 
     Options All -Indexes
 
